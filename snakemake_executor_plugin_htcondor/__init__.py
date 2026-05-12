@@ -1232,6 +1232,9 @@ class Executor(RemoteExecutor):
                 else:
                     submit_dict[classad_key] = value
 
+        if "MaxRunHours" in job.resources.keys():
+            submit_dict["+MaxRunHours"] = job.resources.get("MaxRunHours")
+
         # Log resource requests with human-readable units
         self._log_resource_requests(submit_dict)
 
