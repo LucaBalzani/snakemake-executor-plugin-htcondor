@@ -145,7 +145,7 @@ common_settings = CommonSettings(
     pass_envvar_declarations_to_cmd=False,
     # whether the default storage provider shall be deployed before the job is run on
     # the remote node. Usually set to True if the executor does not assume a shared fs
-    auto_deploy_default_storage_provider=True,
+    auto_deploy_default_storage_provider=False, #THIS WAS CHANGED TO FALSE TO ALLOW ALSO THE xdroot plugin
     # specify initial amount of seconds to sleep before checking for job status
     init_seconds_before_status_checks=0,
     # indicate that the HTCondor executor can transfer its own files to the remote node
